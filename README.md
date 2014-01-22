@@ -1,4 +1,4 @@
 python-basic-pgms
 =================
 
-This is a repository for simple progrms written in python, as a refrence material and as an introduction to python
+This is a repository for simple programs written in python,  used for learning python programming
