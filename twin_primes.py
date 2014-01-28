@@ -7,8 +7,8 @@ displaying an error message.
 This program is written to be compatible with both Python2+ and Python3+
 """
 __autor__ = "Bhuvanesh Kumar (bhuvibhuvanesh@gmail.com)"
-__version__ = "0.1"
-__date__ = "2014-01-27"
+__version__ = "0.2"
+__date__ = "2014-01-28"
 __license__ = "WTFPL"
 
 import sys
@@ -30,15 +30,15 @@ except ValueError:
 	print ("usage: "+sys.argv[0]+" [start] <end>")
 	sys.exit()
 
+#if python2 is used, use xrange instead of range
+if sys.version_info < (3,):
+	range = xrange
 	
 """this function finds the twin primes between given ranges
 arguments start and end are mandatory
 this function doesnot return a value
 """
 def find_twin_primes(start, end):
-	#if python 3+ is used, use range instead of xrange
-	if sys.version_info > (3,):
-		xrange = range
 
 	#check whether start and end both are positive integers
 	if (start <= 0 or end <= 0):
