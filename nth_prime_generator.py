@@ -3,8 +3,8 @@ This program finds the nth prime number, where n is input to
 the program as a command line argument.
 """
 __author__ = "Bhuvanesh Kumar (bhuvibhuvanesh@gmail.com)"
-__version__ = "0.1"
-__date__ = "2014-01-23"
+__version__ = "0.2"
+__date__ = "2014-02-07"
 __license__ = "WTFPL"
 
 import sys
@@ -31,7 +31,7 @@ elif (n == 1):
 candidate = 3
 while(1):
 	if (candidate % 2 != 0):
-		for factor in xrange(3,candidate//2,2):
+		for factor in xrange(3,(candidate//3)+1,2):
 			if (candidate % factor == 0):
 				break
 		else:
