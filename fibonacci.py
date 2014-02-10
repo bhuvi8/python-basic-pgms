@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Fibonacci series
 This program generates n fibonacci series numbers and prints them to the screen,
 where n is given as a command line argument to the program

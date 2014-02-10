@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Prime Num Generator
 This program finds the nth prime number, where n is input to 
 the program as a command line argument.

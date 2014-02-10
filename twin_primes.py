@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """twin_primes.py
 This program prints a list of twin primes in a given range
 If only one integer is entered, twin primes from 2 to the entered integer is
@@ -7,8 +8,8 @@ displaying an error message.
 This program is written to be compatible with both Python2+ and Python3+
 """
 __autor__ = "Bhuvanesh Kumar (bhuvibhuvanesh@gmail.com)"
-__version__ = "0.2"
-__date__ = "2014-01-28"
+__version__ = "0.3"
+__date__ = "2014-02-11"
 __license__ = "WTFPL"
 
 import sys
@@ -60,7 +61,7 @@ def find_twin_primes(start, end):
 
 	#start looking for primes in the range by successive division
 	for candidate in range(start,end+1,2):
-		for factor in range(3,candidate//2,2):
+		for factor in range(3,(candidate//3)+1,2):
 			if (candidate % factor == 0):
 				break
 		else:
