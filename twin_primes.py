@@ -8,8 +8,8 @@ displaying an error message.
 This program is written to be compatible with both Python2+ and Python3+
 """
 __autor__ = "Bhuvanesh Kumar (bhuvibhuvanesh@gmail.com)"
-__version__ = "0.3"
-__date__ = "2014-02-11"
+__version__ = "0.4"
+__date__ = "2015-01-13"
 __license__ = "WTFPL"
 
 import sys
@@ -57,11 +57,14 @@ def find_twin_primes(start, end):
 		#if start is even increment it by one, since there can be no
 		#even prime other than 2
 		start += 1
+	if (end % 2 != 0):
+		#if end is odd do upto end else do only upto end-1
+		end +=1
 	p1 = 2
 
 	#start looking for primes in the range by successive division
-	for candidate in range(start,end+1,2):
-		for factor in range(3,(candidate//3)+1,2):
+	for candidate in range(start,end,2):
+		for factor in range(3,int(candidate**(0.5))+1,2):
 			if (candidate % factor == 0):
 				break
 		else:
